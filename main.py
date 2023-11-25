@@ -1,11 +1,5 @@
 from scapy.all import *
 
-# Number of packets to send
-num_packets = 5
-
-# List to store received packets
-received_packets = []
-
 # Loop to send different types of packets
 while True:
         # Time for DDOS
